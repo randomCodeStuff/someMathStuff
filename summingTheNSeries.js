@@ -16,4 +16,16 @@ def summingSeries(n):
 
 So, is there something specific to Javascript maybe about large numbers
 this isn't working properly? :)
+
+Also, I was trying to see if there was a way to
+square things using bitwise artithmatic and this was the best
+I came up with so far
+def summingSeries(n):
+    if n%2 ==0:
+        #return ((2*n)*(n/2))%(1000000007)
+        return (n<<1)*(n>>1)%1000000007
+    else:
+        m=n-1
+        return ((m<<1)*(m>>1)+((n<<1)-1))%(1000000007)
 */
+
